@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nama Website - Hotel & Resort</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">NAMAWEBSITE.COM</a>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Login</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <p class="welcome-text">Welcome to</p>
+        <h1>Nama Website</h1>
+        <h2>Hotel & Resort</h2>
+
+        <form class="landscape-form" action="proses.php" method="get">
+            <div class="form-group">
+                <label for="check-in-date">Check-In Date</label>
+                <input type="datetime-local" id="check-in-date" name="check-in-date" required>
+            </div>
+            <div class="form-group">
+                <label for="check-out-date">Check-Out Date</label>
+                <input type="datetime-local" id="check-out-date" name="check-out-date" required>
+            </div>
+            <div class="form-group">
+                <label for="rooms">Rooms</label>
+                <div class="input-group">
+                    <button type="button" class="minus" onclick="updateCount('rooms', -1)">-</button>
+                    <input type="number" id="rooms" name="rooms" value="1" min="1" max="20" readonly>
+                    <button type="button" class="plus" onclick="updateCount('rooms', 1)">+</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="adults">Guest</label>
+                <div class="input-group">
+                    <button type="button" class="minus" onclick="updateCount('adults', -1)">-</button>
+                    <input type="number" id="adults" name="adults" value="1" min="1" max="20" readonly>
+                    <button type="button" class="plus" onclick="updateCount('adults', 1)">+</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="type-room">Room Type</label>
+                <select name="type-room" id="type-room" class="def" required>
+                    <option value="pls"disabled selected>Room Type</option>
+                    <option value="uj">Standard Celestial</option>
+                    <option value="su">Deluxe Celestial</option>
+                    <option value="sur">Suite Celestial</option>
+                    <option value="mu">Family Celestial</option>
+                </select>
+            </div>
+            <button type="submit" class="confirm-btn">Confirm</button>
+        </form>
+        
+    </main>
+
+    <footer class="footer">
+        <p>© COPYRIGHT</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

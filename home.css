@@ -1,0 +1,199 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                url(pict/home.jpg) center/cover no-repeat;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.welcome-text {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.discover-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.discover-btn:hover {
+    background-color: #333;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    font-size: 0.8em;
+}
+
+.landscape-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px; /* Jarak antar elemen */
+    background-color: rgba(0, 0, 0, 0.7); /* Transparan hitam */
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(255, 215, 0, 0.4); /* Bayangan emas */
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: flex-start;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #FFD700; /* Teks emas */
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border: 1px solid #FFD700; /* Border emas */
+    border-radius: 5px;
+    background-color: #111; /* Latar hitam gelap */
+    color: #FFD700; /* Teks emas */
+    width: 120px; /* Lebar input kecil */
+    max-width: 100%; 
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.input-group button {
+    padding: 5px 8px;
+    font-size: 0.9rem;
+    border: 1px solid #FFD700;
+    border-radius: 4px;
+    background-color: #FFD700; /* Tombol emas */
+    color: #000; /* Teks hitam */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.input-group button:hover {
+    background-color: #DAA520; /* Emas lebih gelap saat hover */
+    color: gold; /* Teks putih saat hover */
+}
+
+.confirm-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    color: gold; /* Teks hitam */
+    background-color: black; /* Tombol emas */
+    border: 1px solid gold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+    align-self: flex-end;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.confirm-btn:hover {
+    background-color: #DAA520; /* Emas lebih gelap saat hover */
+    color: #fff; /* Teks putih saat hover */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .landscape-form {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .form-group {
+        align-items: center;
+    }
+
+    .confirm-btn {
+        margin-left: 0;
+    }
+}
+
+
+#type-room {
+    font-size: 1.1rem; 
+    padding: 8px 12px; 
+    width: 100%; 
+    border: 1px solid gold; 
+    border-radius: 4px; 
+}
